@@ -180,7 +180,16 @@ Run `--stats` to see the percentiles of each property for your file. SuperSplat'
 
 Compare settings with `--preview`, then open the result in SuperSplat.
 
-## 5. Limitations
+## 5. Make a video of the result
+
+`render_video.py` renders a cleaned splat into an `.mp4` (real splat rendering on the GPU, camera swinging around the object). See **[README_video.md](README_video.md)** for install, usage and options. Quick start:
+
+```bash
+conda activate splat-render
+python render_video.py cleaned.ply cleaned.mp4 --auto
+```
+
+## 6. Limitations
 
 - `.spz`, `.ksplat` and `.sog` files are not supported.
 - The SuperSplat compressed `.ply` reader was written from the format description and tested on a synthetic file, not on a file exported by SuperSplat. Check the first result in SuperSplat.
@@ -188,7 +197,7 @@ Compare settings with `--preview`, then open the result in SuperSplat.
 - The default thresholds are rules of thumb, tuned on one reconstruction (iteration 7000). Run `--stats` and check each new dataset in SuperSplat.
 - It only removes Gaussians; it does not fix holes or wrong colours.
 
-## 6. Getting less noise in the first place
+## 7. Getting less noise in the first place
 
 Cleaning afterwards treats the symptom. These change the training itself:
 

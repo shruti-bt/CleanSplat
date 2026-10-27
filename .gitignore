@@ -1,0 +1,6 @@
+# cleaned outputs and previews (large, regenerate with clean_splat.py)
+*.ply
+*.splat
+*.png
+!figures/*.png
+__pycache__/
